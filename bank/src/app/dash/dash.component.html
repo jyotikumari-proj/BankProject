@@ -1,0 +1,105 @@
+
+<head>
+    <title>Bootstrap 4 Website Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+    .fakeimg {
+      height: 200px;
+      background: #aaa;
+    }
+    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+      <!--
+    <div class="jumbotron text-center" style="margin-bottom:0">
+      <h1>My First Bootstrap 4 Page</h1>
+      <p>Resize this responsive page to see the effect!</p> 
+    </div>
+    -->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <a class="navbar-brand" >welcome  {{name}}</a>
+    </nav>
+    
+    <div class="container" style="margin-top:30px">
+      <div class="row">
+        <div class="col-sm-4">
+         <!-- <h2>About Me</h2>
+          <h5>Photo of me:</h5>
+          <div class="fakeimg">Fake Image1</div>-->
+          <h3>Banking services</h3>
+         
+          <ul class="nav nav-pills flex-column">
+            <li class="nav-item">
+              <a class="nav-link active " routerLink="/fd" routerLinkActive="active">Fixed deposite</a>
+            </li>
+            <br/>
+            <li class="nav-item">
+              <a class="nav-link active" routerLink="/dash2" (click)="fdStatement()" routerLinkActive="active" >FD Statement</a>
+            </li>
+            <br/>
+            <li class="nav-item">
+              <a class="nav-link active " href="#">Add balance</a>
+            </li>
+            <br/>
+            <li class="nav-item">
+                <a class="nav-link active " href="#">Personal Detail</a>
+              </li>
+          </ul>
+          <hr class="d-sm-none">
+        </div>
+        <div class="col-sm-8">
+          <h5>Account No: {{accountNo}}</h5>
+          <h5 class="float-right">Balance: Rs{{balance}} </h5>
+          <h5>Account Type: {{ accountType}}</h5>
+          
+       
+          <br>
+          <!--
+         Hii
+         <p *ngFor="let y of fdList">
+          <br/>{{y.depositAmount}} --{{y.userId}}    
+          </p>
+        -->
+      
+        <div [hidden]=!isDataLoded > 
+          <h2>FD Statement</h2>      
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Deposite Amount</th>
+                <th>Date of FD</th>
+                <th>Date of Maturity</th>
+                <th>Maturity Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let fd of fdList" >
+                <td>{{fd.depositAmount}}</td>
+                <td>{{fd.dateOfBooking}}</td>
+                <td>{{fd.dateOfMaturity}}</td>
+                <td>{{fd.maturityAmount}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="jumbotron text-center" style="margin-bottom:0">
+      <p>Footer</p>
+    </div>
+    
+
+   
+    </body>

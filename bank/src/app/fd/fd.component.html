@@ -1,0 +1,62 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <a class="navbar-brand" >welcome  </a>
+  </nav>
+<p>fd works!</p>
+
+
+<div class="container">
+    <h2>Book New Fixed Deposit</h2>
+    <form #loginform= "ngForm"  (ngSubmit) ="checkDepositAmount()">
+      
+      <div class="form-group">
+        <label for="deposit Amount">Deposit Amount:</label>
+        <input type="text" class="form-control" id="depositAmount" placeholder="Enter Amount" name="depositAmount" [(ngModel)] = "fixedDeposit.depositAmount">
+      </div>
+     <!--
+      <div>
+        <label for="period">Period:</label>
+        <textarea maxlength="" size="4" rows=1 cols="0"placeholder="Year" [(ngModel)]="year" ></textarea>
+        <textarea maxlength="" size="4" rows=1 cols="0" placeholder="Month" [(ngModel)]="month"></textarea>
+        <textarea maxlength="" size="4" rows=1 cols="0" placeholder="Day" [(ngModel)]="day" ></textarea>
+      </div>
+      -->
+      <div class="row">
+        <div class="col-50">
+          <label for="state">Year</label>
+          <input type="text" id="state" name="state"  [(ngModel)] = "year">
+        </div>
+        <div class="col-50">
+          <label for="zip">Month</label>
+          <input type="text" id="zip" name="zip" [(ngModel)] = "month">
+        </div>
+        <div class="col-50">
+          <label for="zip">Day</label>
+          <input type="text" id="day" name="day" [(ngModel)] = "day">
+        </div>
+      </div>
+
+
+<!--
+      <div class="form-group">
+        <label for="year">Period:</label>
+        <input type="text" class="form-control" id="year" placeholder="Enter total Year" name="year" [(ngModel)] = "year">
+        <input type="text" class="form-control" id="month" placeholder="Enter total month" name="month" [(ngModel)] = "month">
+        <input type="text" class="form-control" id="day" placeholder="Enter total day" name="day" [(ngModel)] = "day">
+      </div>-->
+      <div class="form-group">
+        <label for="interest rate">Interest Rate:</label>
+        <input type="text" readonly class="form-control" id="interestRate" placeholder="5%" name="interestRate" [(ngModel)] = "fixedDeposit.interestRate">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <br/>
+      <small class="text-success"><b>{{msg}}</b></small>
+      <br/>
+      <small class="text-success"><b>{{msg2}}</b></small>
+    </form>
+    
+  </div>
+
+
+
+
+

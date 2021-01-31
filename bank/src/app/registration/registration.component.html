@@ -1,0 +1,26 @@
+<div  id="form-wrapper" style="max-width:500px;margin:auto;">
+
+<p>Please fill the detail:</p>
+
+<br/><label>UserId</label> <input type="text" [(ngModel)]='obj.userId'/><br>
+<br/><label>Name</label> <input type="text" [(ngModel)]='obj.name'/><br>
+<br/><label>Password</label><input type="password" required="true" [(ngModel)]='obj.password'/><br>
+<br/><label>Aadhar</label> <input type="text" [(ngModel)]='obj.aadhar'/><br>
+<br/><label>PAN</label> <input type="text" [(ngModel)]='obj.pan'/><br>
+<br/><label>Account Type</label>  <input type="text" [(ngModel)]='obj.accountType'/><br>
+<br/><label>Mobile</label> <input type="text" [(ngModel)]='obj.mobile'/><br>
+<br/><label>User Type</label> <input type="text" [(ngModel)]='obj.userType'/><br>
+<br/><label>Address: House_No</label> <input type="text" [(ngModel)]='address.houseNo'/><br>
+<br/><label>Location</label> <input type="text" [(ngModel)]='address.location'/><br>
+<br/><label>City</label> <input type="text" [(ngModel)]='address.city'/><br>
+<br/><label>State</label> <input type="text" [(ngModel)]='address.state'/><br>
+<br/><label>PIN</label> <input type="text" [(ngModel)]='address.pin'/><br>
+<br/><label>AccountNo</label> <input type="text" [(ngModel)]='account.accountNo'/><br>
+<br/><label>Balance</label> <input type="text" [(ngModel)]='account.balance'/><br>
+
+<br/><button (click)='check()'>Register</button>
+
+<p> {{title2}}  </p>
+<button (click)="userLogin('userLogin')">User Login</button>
+</div>
+<router-outlet></router-outlet>

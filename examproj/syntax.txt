@@ -1,0 +1,31 @@
+1. remember you need a table called Eraser
+before running the program. 
+
+MariaDB [test]> select * from eraser;
++----------+------+
+| eraserid | type |
++----------+------+
+|        1 |    2 |
+|        3 |    4 |
+|        4 |    4 |
+|       11 |   11 |
++----------+------+
+both columns are int types..
+
+
+2. Remember in your final project
+Eraser should not be there..
+
+3. if your project has Eraser class code you will
+lose 10 marks..
+
+4. ensure screen shots is present..
+
+5. zip only the project and not the workspace.
+
+
+
+
+
+
+
